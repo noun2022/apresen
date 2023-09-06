@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--primary-color);
+    --primary-color: #212121;
+    --secondary-color: white;
+
+    --section_background-color: #171717;
+    --section_border-color: black;
+
+    transition: .2s;
+}
+
+.light-mode {
+    --primary-color: white;
+    --secondary-color: #303030;
+    --section_background-color: rgb(246, 252, 255);
+    --section_border-color: rgb(210, 241, 255);
+}
+
+.light-mode-icon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.social-button {
+    padding: .8em;
+    border-radius: .2em;
+}
+
+.social-button:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color .2s ease-in-out;
+}
+
+a:hover {
+    color: rgb(177, 177, 177);
+}
+
+.discord {
+    color: white;
+    background-color: #7289da;
+}
+
+.discord:hover {
+    background-color: #6a7fce;
+}
+
+.section-title {
+    color: var(--secondary-color);
+    font-size: 1.125em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.section-desc {
+    color: var(--secondary-color);
+    font-size: 0.75em;
+    font-weight: normal;
+}
+
+.header {
+    text-align: center;
+    margin: 2em auto;
+    color: var(--secondary-color);
+}
+
+.header-profile {
+    width: 6em;
+    height: 6em;
+    object-fit: cover;
+    border-radius: 50%;
+    border: .3em solid var(--secondary-color);
+}
+
+.header-name {
+    font-size: 2em;
+    margin-top: .5em;
+    margin-bottom: 0;
+}
+
+.header-work {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.section-box {
+    width: 31.25em;
+    background-color: var(--section_background-color);
+    border: 1px solid var(--section_border-color);
+    border-radius: .5em;
+    margin: 1em auto;
+    padding: 2em;
+}
+
+.section-box ul {
+    list-style: none;
+    color: var(--secondary-color);
+    padding: 0;
+    margin: 1.5em 0 0;
+}
+
+.social li, .langs li {
+    display: inline-block;
+    font-size: 1em;
+    margin-right: 2em;
+}
+
+.langs li img {
+    display: block;
+    margin: .2em auto;
+    transition: transform .1s ease-in;
+}
+
+.langs img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.75em;
+    color: grey;
+    margin: 1em;
+}
+
+@media screen and (max-width: 48em) {
+    .section-box {
+        text-align: center;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 3em auto 5em;
+    }
+
+    .section-box .social {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .section-box .social li {
+        display: block;
+        margin: 1.2em auto;
+    }
+
+    .github {
+        background-color: var(--section_background-color);
+        border: 1px solid var(--section_border-color);
+    }
+
+    .github:hover {
+        background-color: var(--section_background-color);
+        border: 1px solid var(--section_border-color);
+    }
+
+    .langs {
+        display: block;
+        width: 100%;
+    }
+
+    .langs .col-1_2 {
+        float: left;
+        width: 50%;
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    footer {
+        margin-top: 20em;
+    }
+}
+
+@media screen and (max-width: 30em) {
+    .section-box {
+        width: 20em;
+        margin-bottom: 1em;
+    }
+
+    .langs .col-1_2 {
+        float: none;
+        width: 100%;
+    }
+
+    .langs li img {
+        display: inline;
+        vertical-align: middle;
+    }
+
+    footer {
+        margin: 0 0 2em;
+    }
+}
